@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>detour — hide US layovers on Google Flights</title>
+<meta name="description" content="Hides flight results that route through the US or its territories when you're on Google Flights.">
+<meta property="og:title" content="detour">
+<meta property="og:description" content="Hides flight results that route through the US or its territories when you're on Google Flights.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --ink:    #1b1710;
+    --muted:  #6d654f;
+    --cream:  #f2ecdd;
+    --paper:  #f7f2e6;
+    --indigo: #2e246b;
+    --rule:   rgba(27,23,16,.16);
+    --measure: 34rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 17px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    padding: 0 6vw;
+  }
+
+  main { max-width: var(--measure); margin: 0 auto; padding: 12vh 0 0; }
+
+  /* One type scale, driven by size and space rather than colour or weight
+     tricks. Headings are the same face as the body — the shift in scale is
+     doing the work. */
+  h1 { font-size: 2.6rem; line-height: 1.1; margin: 0 0 .6rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; line-height: 1.25; margin: 0 0 .9rem; letter-spacing: -.01em; }
+  p  { margin: 0 0 1.1rem; }
+  a  { color: var(--indigo); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  .lede { font-size: 1.22rem; line-height: 1.45; margin-bottom: 1.4rem; }
+  .muted { color: var(--muted); }
+
+  /* The disclaimer. Set as a quiet aside rather than a banner or a callout box
+     — it is a clarification, not an alert, and boxing it would give it more
+     weight than the sentence itself asks for. */
+  .aside {
+    font-size: .98rem;
+    color: var(--muted);
+    border-left: 2px solid var(--rule);
+    padding-left: .9rem;
+    margin: 0 0 2rem;
+  }
+
+  section { margin: 0 0 4.5rem; }
+  section:first-of-type { margin-top: 3rem; }
+
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 0 0 4.5rem; }
+
+  /* ---- install ---- */
+  .install { margin: 2rem 0 0; }
+  .install a.button {
+    display: inline-block;
+    background: var(--indigo);
+    color: #fff;
+    text-decoration: none;
+    padding: .7rem 1.15rem;
+    border-radius: 4px;
+    font: 600 .95rem/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  .install a.button:hover { background: #3a2e86; }
+
+  .soon { font-size: 1rem; color: var(--muted); margin: 0; }
+
+  /* ---- footer ---- */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 5rem;
+    font-size: .95rem;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 .6rem; }
+  .coffee { margin-top: 2.5rem; }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; padding: 0 7vw; }
+    main { padding-top: 8vh; }
+    h1 { font-size: 2.05rem; }
+    section { margin-bottom: 3.5rem; }
+    hr { margin-bottom: 3.5rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>detour</h1>
+  <p class="lede">Hides flight results that route through the US or its territories
+  when you&rsquo;re on Google Flights.</p>
+
+  <p class="aside">This tool is NOT meant as a sign of hostility against the United
+  States.</p>
+
+  <div class="install">
+    <!-- Swap this href for the Chrome Web Store URL once the listing is live. -->
+    <a class="button" href="https://github.com/kbathmax-ops/detour-extension">Get the extension</a>
+  </div>
+
+
+  <hr style="margin-top:4rem">
+
+  <section>
+    <h2>Hi! I&rsquo;m Koshin</h2>
+
+    <p>Over the past year, my friends in Canada and beyond have expressed their
+    concerns about travelling to the United States. Travel to the US has dropped
+    drastically, driven by Canadians&rsquo; fears about border issues.</p>
+
+    <p>Detour is a simple extension. On Google Flights, it will hide flights with
+    layovers in the US, giving you peace of mind about the flights you&rsquo;re
+    booking.</p>
+
+    <p>There are no analytics, account, or network requests involved. The only things
+    stored are your on/off preference and the last result count on your own
+    machine.</p>
+
+    <p class="soon">Skyscanner coming soon.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div style="max-width:var(--measure);margin:0 auto">
+    <p>Made by <a href="https://kbathmax.com">Koshin Bathmax</a></p>
+    <p class="coffee"><a href="https://buymeacoffee.com/koshin">Buy me a coffee</a></p>
+  </div>
+</footer>
+</body>
+</html>
